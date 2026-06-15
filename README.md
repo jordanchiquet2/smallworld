@@ -2,15 +2,19 @@
 
 A top-down narrative RPG inspired by *Disco Elysium*, built in Unreal Engine 5 (C++ and Blueprints).
 
-**Play the demo:** [itch.io link here]
+**Play the demo:** https://jordanchiquet.itch.io/smallworld
 
 ## About this repository
 
 This repo contains the C++ gameplay framework for SmallWorld — the systems-level code that underpins the game's interaction, dialogue, movement, and worldbuilding tooling. It is shared as a portfolio sample to demonstrate engineering approach, code structure, and systems design.
 
+### What's with all the stuff called wetDisco?
+
+I started with a prototype for an action-stealth game called Wetwork, but then ended up changing it into a narrative RPG ispired by Disco Elysium! I think the name is kind of neat. 
+
 ### A note on scope
 
-SmallWorld is built with a **tools-first design philosophy**: every gameplay system here exists to be configured, combined, and reused from the Unreal Editor and Blueprints, so that "designer mode" — writing dialogue, building scenarios, dressing levels — stays fast and frictionless. As a result, a significant portion of the game's actual content and behavior lives in Blueprint graphs, data assets, and the Articy:Draft narrative database, none of which are included in this repository.
+SmallWorld is built with a **tools-first design philosophy**: every gameplay system here exists to be configured, combined, and reused from the Unreal Editor and Blueprints, so that I can swap into "designer mode" after eating those vegetables. Writing dialogue, building scenarios, dressing levels should stay fast and frictionless. As a result, a significant portion of the game's actual content and behavior lives in Blueprint graphs, data assets, and the Articy:Draft narrative database, none of which are included in this repository.
 
 What you'll find here is the underlying framework: the C++ base classes, components, and interfaces that those Blueprints build on top of. Think of it as the engine room rather than the finished ship. I'm happy to walk through specific systems, Blueprint implementations, or design decisions in more detail on request.
 
@@ -19,7 +23,6 @@ What you'll find here is the underlying framework: the C++ base classes, compone
 - **Interaction framework** (`InteractiveActor`, `InteractableInterface`, `InteractiveDialogueActor`, `InteractiveItem`, `InteractiveContainer`, `InteractiveActivatable`) — a shared base for any actor the player can click on, walk up to, and interact with. Handles highlight states, click-to-move targeting, gameplay-tag-gated usability, and routes into dialogue, item pickup, or custom Blueprint logic.
 - **Modular motion components** (`MoverComponent`, `RotatorComponent`, `CableMovementComponent`) — timeline-driven movement and rotation that can be dropped onto any actor and configured entirely from the editor (offsets, looping, ping-pong, easing curves) without writing code.
 - **Player controller & input** (`wetDisco2PlayerController`) — click-to-move navigation, Enhanced Input integration, pending-interaction queuing (walk to target, then trigger interaction on arrival), and cursor/highlight management.
-- **Dialogue & narrative integration** (`WetdiscoArticyTypes`, `WetdiscoGlobalVariables`, `WetdiscoExpressoScripts`, `WetdiscoDatabase`, `WetdiscoLocalizerSystem`) — generated bindings and supporting systems for the Articy:Draft narrative database, exposing global variables, dialogue scripts, and localization to gameplay and UI. This replaced an earlier dialogue plugin during a refactor; some legacy "Dlg"-prefixed naming remains as a holdover.
 - **UI helpers** (`RichTextBlockColorDecorator`) — custom rich-text decorators for in-game dialogue and UI styling.
 
 ## Tech
