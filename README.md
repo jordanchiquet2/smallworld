@@ -20,9 +20,9 @@ What you'll find here is the underlying framework: the C++ base classes, compone
 
 ## Core systems
 
-- **Interaction framework** (`InteractiveActor`, `InteractableInterface`, `InteractiveDialogueActor`, `InteractiveItem`, `InteractiveContainer`, `InteractiveActivatable`) — a shared base for any actor the player can click on, walk up to, and interact with. Handles highlight states, click-to-move targeting, gameplay-tag-gated usability, and routes into dialogue, item pickup, or custom Blueprint logic.
-- **Modular motion components** (`MoverComponent`, `RotatorComponent`, `CableMovementComponent`) — timeline-driven movement and rotation that can be dropped onto any actor and configured entirely from the editor (offsets, looping, ping-pong, easing curves) without writing code.
-- **Player controller & input** (`wetDisco2PlayerController`) — click-to-move navigation, Enhanced Input integration, pending-interaction queuing (walk to target, then trigger interaction on arrival), and cursor/highlight management.
+- **Interaction framework** (`InteractiveActor`, `InteractableInterface`, `InteractiveDialogueActor`, `InteractiveItem`, `InteractiveContainer`, `InteractiveActivatable`) a shared base for any actor the player can click on, walk up to, and interact with. Handles highlight states, click-to-move targeting, gameplay-tag-gated usability, and routes into dialogue, item pickup, or custom Blueprint logic.
+- **Modular motion components** (`MoverComponent`, `RotatorComponent`, `CableMovementComponent`) timeline-driven movement and rotation that can be dropped onto any actor and configured entirely from the editor (offsets, looping, ping-pong, easing curves) without writing code.
+- **Player controller & input** (`wetDisco2PlayerController`) click-to-move navigation, Enhanced Input integration, pending-interaction queuing (walk to target, then trigger interaction on arrival), and cursor/highlight management.
 - **UI helpers** (`RichTextBlockColorDecorator`) — custom rich-text decorators for in-game dialogue and UI styling.
 
 ## Tech
