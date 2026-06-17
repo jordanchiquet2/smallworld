@@ -14,9 +14,9 @@ I started with a prototype for an action-stealth game called Wetwork, but then e
 
 ### A note on scope
 
-SmallWorld is built with a **tools-first design philosophy**: every gameplay system here exists to be configured, combined, and reused from the Unreal Editor and Blueprints, so that I can swap into "designer mode" after eating those vegetables. Writing dialogue, building scenarios, dressing levels should stay fast and frictionless. As a result, a significant portion of the game's actual content and behavior lives in Blueprint graphs, data assets, and the Articy:Draft narrative database, none of which are included in this repository.
+SmallWorld is built with a **tools-first design philosophy**: every gameplay system here exists to be configured, combined, and reused from the Unreal Editor and Blueprints, so that I can swap into "designer mode" after eating my vegetables. Writing dialogue, building scenarios, dressing levels should be just me using my paremeterized tools. As a result, a significant portion of the game's actual content and behavior lives in Blueprint graphs, data assets, and the Articy:Draft narrative database, none of which are included in this repository for practical and logistic reasons. But I am always happy to talk about how I implemented specific things or solved specific challenges. I think the camera changing opacity of objects is especially cool. Baldur's Gate 3 made it look so easy! 
 
-What you'll find here is the underlying framework: the C++ base classes, components, and interfaces that those Blueprints build on top of. Think of it as the engine room rather than the finished ship. I'm happy to walk through specific systems, Blueprint implementations, or design decisions in more detail on request.
+What you'll find here is the underlying framework: the C++ base classes, components, and interfaces that those Blueprints build on top of. 
 
 ## Core systems
 
